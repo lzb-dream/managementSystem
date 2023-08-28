@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+    <h4>这展示了 flex 增长</h4>
+    <h5>A,B,C 和 F 具有 flex-grow:1。D 和 E 具有 flex-grow:2 .</h5>
+    <div id="content">
+      <div class="boxg" style="background-color:red;">A</div>
+      <div class="box" style="background-color:lightblue;">B</div>
+    </div>
+    <button>变化</button>
+</body>
+<script>
+    var a = document.querySelector('.boxg')
+    var button = document.querySelector('button')
+    button.addEventListener('click',()=>{
+        a.style.width = '50px'
+        console.log(a.style.width)
+    })
+</script>
+
+<style>
+    #content {
+      display: flex;
+
+      justify-content: space-around;
+      flex-flow: row wrap;
+      align-items: stretch;
+    }
+    .boxg {
+      width:104px;
+      border: 3px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .box {
+      flex-grow: 1;
+      border: 3px solid rgba(0, 0, 0, 0.2);
+    }
+
+</style>
+</html>
